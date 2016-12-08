@@ -7,8 +7,8 @@ ENV TSDB_VERSION 2.2.0
 ENV HBASE_VERSION 1.2.0
 
 RUN DEBIAN_FRONTEND=noninteractive \
-  apt-get -qq update && apt-get -yqq upgrade
-
+  apt-get -qq update
+  
 RUN DEBIAN_FRONTEND=noninteractive \
   apt-get -yqq install \
     openjdk-8-jdk-headless \
@@ -48,5 +48,4 @@ WORKDIR /
 
 # Supervisor
 COPY etc/supervisord.conf /etc/supervisor/supervisord.conf
-RUN apt-get -yqq install netcat
 CMD /usr/bin/supervisord
