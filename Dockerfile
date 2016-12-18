@@ -4,7 +4,7 @@ MAINTAINER Tom Taylor <tom+dockerfile@tomm.yt>
 EXPOSE 60000 60010 60030 4242 16010
 
 ENV TSDB_VERSION 2.2.0
-ENV HBASE_VERSION 1.2.0
+ENV HBASE_VERSION 1.2.4
 
 RUN DEBIAN_FRONTEND=noninteractive \
   apt-get -qq update
